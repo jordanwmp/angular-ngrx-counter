@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1 class="container__title">NGRX COUNTER</h1>
+
+  <span class="container__counter">Current Count: {{ count$ | async }}</span>
+
+  <div class="container__btns">
+  
+    <button class="container__btns--increment" (click)="increment()">Increment</button>
+
+    <button class="container__btns--decrement" (click)="decrement()">Decrement</button>
+
+    <button class="container__btns--reset" (click)="reset()">Reset</button>
+  </div>
+</div>

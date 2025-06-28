@@ -1,0 +1,71 @@
+$sm: 540px;
+
+@mixin media-max() {
+  @media(max-width: $sm) {
+    @content
+  }
+}
+
+%buttons {
+  padding: 12px 28px;
+  border: none;
+  background: #cbcbcb;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  &__counter {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &--increment {
+      @extend %buttons;
+      background: green;
+    }
+
+    &--decrement {
+      @extend %buttons;
+      background: red;
+    }
+
+    &--reset {
+      @extend %buttons;
+      background: #292929;
+    }
+
+  }
+
+  @include media-max() {
+    .container {
+      width: 98%;
+      margin: auto;
+    }
+  }
+
+}
