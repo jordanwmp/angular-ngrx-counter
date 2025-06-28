@@ -16,3 +16,9 @@
 - 🧠 TypeScript
 - 🎨 SCSS
 - 🧱 BEM (Block Element Modifier)
+
+## Live
+
+You can access the live Demon [here](https://jordanwmp.github.io/angular-ngrx-counter/)
+
+
